@@ -1,0 +1,14 @@
+.header {
+  width: 100%;
+  padding: 0 20px;
+  background: rgba(0, 0, 0, 0.21);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  max-width: $width-content-desktop;
+  margin: 0 auto;
+  // background-color: rgba(255, 255, 255, 0.2);
+}

@@ -1,0 +1,24 @@
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // height: 100px;
+  // width: 315px;
+  padding: 20px 0 25px 0;
+  border-bottom: none;
+}
+
+.logo__image {
+  max-width: 60vw;
+  height: auto;
+}
+
+@media #{$tablet} {
+  .logo {
+    padding: 24px 9px 35px 27px;
+    border-style: solid;
+    border-image-width: 1px;
+    border-image-source: url(../images/border.png);
+    border-image-slice: 1;
+  }
+}

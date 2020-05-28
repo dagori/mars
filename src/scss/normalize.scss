@@ -1,0 +1,36 @@
+body {
+  padding: 0;
+  margin: 0;
+  // width: 100%;
+  font-family: Tahoma, sans-serif;
+  background: #000;
+  box-sizing: border-box;
+}
+
+body * {
+  box-sizing: border-box;
+}
+
+input,
+h1,
+h2,
+h3,
+button,
+ul,
+li,
+a,
+label,
+p,
+form {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  border: none;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  font-family: 'MuseoSansCyrl', sans-serif;
+}

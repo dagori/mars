@@ -1,0 +1,74 @@
+@mixin features($x, $y) {
+  background-image: linear-gradient(to $x $y, $color-feature-block, transparent, transparent);
+
+  &:hover {
+    background-image: linear-gradient(to $x $y, $color-feature-block-hover, transparent, transparent);
+    border-image-source: linear-gradient(to $x $y, $color-feature-border, transparent, transparent);
+  }
+}
+
+@mixin hamburger($width, $height, $space, $color) {
+  span {
+    display: block;
+    position: relative;
+    width: $width;
+    height: $height;
+    background: $color;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: $width;
+      height: $height;
+      background: $color;
+      top: $space;
+      left: 0;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: $width;
+      height: $height;
+      background: $color;
+      bottom: $space;
+      left: 0;
+    }
+  }
+}
+
+@mixin close($width, $height, $space, $color) {
+  span {
+    position: relative;
+    width: $width;
+    height: $height;
+    background: transparent;
+    display: block;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: $width;
+      height: $height;
+      background: $color;
+      top: 0;
+      left: 0;
+      transform: rotate(45deg);
+      transform-origin: center;
+      transition: transform 1s;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: $width;
+      height: $height;
+      background: $color;
+      bottom: 0;
+      left: 0;
+      transform: rotate(-45deg);
+      transform-origin: center;
+      transition: transform 1s;
+    }
+  }
+}

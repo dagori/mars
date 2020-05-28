@@ -1,23 +1,34 @@
-// Создаётся объект promise
-let promise = new Promise((resolve, reject) => {
+/* eslint-disable no-console */
+const menu = document.querySelector('.menu__container');
+const menuButton = document.querySelector('.menu__button');
+const overlay = document.querySelector('.overlay');
 
-  setTimeout(() => {
-    // переведёт промис в состояние fulfilled с результатом "result"
-    resolve("result");
-  }, 1000);
+menuButton.onclick = () => {
+  menu.classList.toggle('menu__container_open');
+  menuButton.classList.toggle('menu__button_open');
+  overlay.classList.toggle('overlay_open');
+};
 
-});
+function closeMenu() {
+  menu.classList.remove('menu__container_open');
+  menuButton.classList.remove('menu__button_open');
+  overlay.classList.remove('overlay_open');
+}
 
-// promise.then навешивает обработчики на успешный результат или ошибку
-promise
-  .then(
-    result => {
-      // первая функция-обработчик - запустится при вызове resolve
-      alert("Fulfilled: " + result); // result - аргумент resolve
-    },
-    error => {
-      // вторая функция - запустится при вызове reject
-      alert("Rejected: " + error); // error - аргумент reject
+overlay.onclick = () => {
+  closeMenu();
+};
+
+const mediaQueryList = window.matchMedia('(min-width: 1190px)');
+
+function handleOrientationChange(evt) {
+  if (evt.matches) {
+    if (menu.classList.contains('menu__container_open')) {
+      closeMenu();
     }
-  );
+  }
+}
 
+handleOrientationChange(mediaQueryList);
+
+mediaQueryList.addListener(handleOrientationChange);

@@ -1,0 +1,35 @@
+<svg viewBox="0 0 500 80" width="1000" height="400" style="background:black; font: bold 100px sans-serif;">
+
+  <pattern 
+            id="p-img" 
+            viewBox="0 0 300 100"
+            patternUnits="userSpaceOnUse"
+            width="200%" height="200%"
+            x="-60%" y="-10%">
+    <image xlink:href="https://68.media.tumblr.com/f6d55c4c3981fd7409a41f9e9cfa71bf/tumblr_oqy2keV1LD1uha1xeo1_400.gif" width="300" height="200"/>
+  </pattern>
+
+  <text text-anchor="middle"
+        x="50%"
+        y="50%"
+        dy=".35em"
+        class="img-layer" fill="url(#p-img)">
+    Musi
+  </text>
+
+  <linearGradient id="gr-overlay" x1="0" y1="0" x2="100%" y2="100%">
+    <stop stop-color="hsla(50, 100%, 70%, 0.5)" offset="10%"/>
+    <stop stop-color="hsla(200, 100%, 60%, 0.5)" offset="50%"/>
+    <stop stop-color="hsla(320, 100%, 50%, 0.5)" offset="90%"/>
+  </linearGradient>
+
+  <text text-anchor="middle"
+        x="50%"
+        y="50%"
+        dy=".35em"
+        class="gradient-layer"
+        fill="url(#gr-overlay)">
+    Musi
+  </text>  
+
+</svg>

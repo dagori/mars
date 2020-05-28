@@ -1,0 +1,16 @@
+// min-desktop: 1170px + 20px = 1190px;
+$color-text: #fff;
+$color-feature-block: rgba(255, 255, 255, 0.1);
+$color-feature-block-hover: rgba(255, 255, 255, 0.2);
+$color-feature-border: #565a60;
+$color-menu-hover: rgba(255, 255, 255, 0.5);
+$color-button: rgba(0, 0, 0, 0.5);
+$color-title: #ff5724;
+//moon d 386
+//from edge to center 960
+$width-content-desktop: 1170px;
+$width-button: 180px;
+//@media queries
+//mobile 320
+$tablet: (min-width: 768px);
+$desktop: (min-width: 1190px);

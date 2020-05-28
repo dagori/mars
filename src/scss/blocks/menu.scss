@@ -1,0 +1,114 @@
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu__button {
+  height: 30px;
+  background: transparent;
+  z-index: 5;
+
+  @include hamburger(40px, 5px, 10px, $color-text);
+}
+
+.menu__button:hover span,
+.menu__button:hover span::before,
+.menu__button:hover span::after {
+  background: linear-gradient(to right, $color-text, $color-title);
+}
+
+.menu__container {
+  display: none;
+  padding: 50px 0 50px;
+}
+
+.menu__container_open {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100vw;
+  max-width: 400px;
+  right: 0;
+  top: 0;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 1);
+  border-radius: 10px;
+}
+
+.menu__container.menu__container_open + .menu__button_open {
+  @include close(40px, 5px, 10px, $color-text);
+}
+
+.menu__item {
+  margin: 5px auto;
+}
+
+.menu__item a {
+  color: $color-text;
+  margin: 10px;
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+
+.menu__item:hover {
+  position: relative;
+
+  a {
+    color: $color-menu-hover;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    left: 0;
+    bottom: 4px;
+    z-index: 10;
+    background-color: $color-menu-hover;
+  }
+}
+
+@media #{$desktop} {
+  .menu__container {
+    display: flex;
+    justify-content: space-between;
+    width: 680px;
+    padding: 0;
+  }
+
+  .menu__item {
+    margin: none;
+  }
+
+  .menu__item a {
+    color: $color-text;
+    font-weight: 300;
+    font-size: 16px;
+  }
+
+  .menu__item:hover {
+    position: relative;
+
+    a {
+      color: $color-menu-hover;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      left: 0;
+      bottom: -10px;
+      z-index: 10;
+      background-color: $color-menu-hover;
+    }
+  }
+
+  .menu__button {
+    display: none;
+  }
+}

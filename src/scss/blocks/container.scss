@@ -1,0 +1,16 @@
+.container {
+  max-width: 1920px;
+  min-width: 320px;
+  margin: 0 auto;
+  background-image: url(../images/bg.jpg);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-color: #000;
+  font-family: 'MuseoSansCyrl', Tahoma, sans-serif;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .container {
+    min-height: 660px;
+  }
+}

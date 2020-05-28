@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'MuseoSansCyrl';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src:
+    local('MuseoSansCyrl-100'),
+    url('../fonts/museo_sans_cyrl_100.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'MuseoSansCyrl';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src:
+    local('MuseoSansCyrl-300'),
+    url('../fonts/museo_sans_cyrl_300.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'MuseoSansCyrl';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src:
+    local('MuseoSansCyrl-700'),
+    url('../fonts/museo_sans_cyrl_700.woff') format('woff');
+}

@@ -1,0 +1,52 @@
+.vector__text {
+  transform: translateX(27px) scale(2.2, 1); //translateX - 47px
+
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    margin-left: 40px;
+  }
+}
+
+.vector__title {
+  margin-top: 60px;
+  font-family: 'MuseoSansCyrl', sans-serif;
+  font-size: 50px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.vector__description {
+  font-family: 'MuseoSansCyrl', sans-serif;
+  font-size: 17px;
+  font-weight: 300;
+  vertical-align: top;
+  text-transform: none;
+}
+
+.vector__line {
+  display: none;
+}
+
+@media #{$tablet} {
+  .vector__text {
+    transform: scale(1.3);
+  }
+
+  .vector__title {
+    font-size: 58px;
+  }
+
+  .vector__description {
+    font-size: 25px;
+  }
+}
+
+@media #{$desktop} {
+  .vector__text {
+    clip-path: url(#clip);
+    transform: none;
+  }
+
+  .vector__line {
+    display: block;
+  }
+}

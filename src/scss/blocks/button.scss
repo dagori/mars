@@ -1,0 +1,17 @@
+.button {
+  width: $width-button;
+  line-height: 36px;
+  text-align: center;
+  color: $color-text;
+  font-size: 14px;
+  font-weight: 100;
+  background: $color-button;
+  border: 1px solid #fff;
+  border-image-width: 1px;
+  border-image-source: linear-gradient(45deg, #fff 0, #fff 3%, #2c5f9f 3%, #09203c 97%, #fff 97%);
+  border-image-slice: 1;
+
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    border-image: none;
+  }
+}
